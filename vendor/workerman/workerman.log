@@ -37,3 +37,5 @@
 2019-04-03 11:30:59 pid:10535 Workerman[start.php] start in DEBUG mode
 2019-04-03 11:44:02 pid:10535 Workerman[start.php] stopping ...
 2019-04-03 11:44:02 pid:10535 Workerman[start.php] has been stopped
+2019-04-03 11:56:34 pid:12127 Workerman[start.php] status 
+2019-04-03 11:56:34 pid:12127 Workerman[start.php] not run
