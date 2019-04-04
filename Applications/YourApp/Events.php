@@ -34,13 +34,13 @@ class Events
      *
      * @param int $client_id 连接id
      */
-    // public static function onConnect($client_id)
-    // {
-    //     // 向当前client_id发送数据
-    //     Gateway::sendToClient($client_id, "Hello $client_id\r\n");
-    //     // 向所有人发送
-    //     // Gateway::sendToAll("$client_id login\r\n");
-    // }
+    public static function onConnect($client_id)
+    {
+        // 向当前client_id发送数据
+        Gateway::sendToClient($client_id);
+        // 向所有人发送
+        // Gateway::sendToAll("$client_id login\r\n");
+    }
 
     /**
      * 当客户端发来消息时触发
@@ -50,16 +50,16 @@ class Events
     public static function onMessage($client_id, $message)
     {
         // 向所有人发送
-        // Gateway::sendToAll("$client_id said $message\r\n");
+        Gateway::sendToAll("$client_id said $message\r\n");
     }
 
     /**
      * 当用户断开连接时触发
      * @param int $client_id 连接id
      */
-   // public static function onClose($client_id)
-   // {
-   //     // 向所有人发送
-   //     // GateWay::sendToAll("$client_id logout\r\n");
-   // }
+    public static function onClose($client_id)
+    {
+        // 向所有人发送
+        GateWay::sendToAll("$client_id logout\r\n");
+    }
 }
